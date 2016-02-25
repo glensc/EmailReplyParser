@@ -264,6 +264,12 @@ EMAIL
         $this->assertTrue($fragments[1]->isQuoted());
     }
 
+    public function testCustomSigRegex()
+    {
+        $regex = $this->parser->getSignatureRegex();
+        $this->parser->setSignatureRegex($regex);
+    }
+
     /**
      * @dataProvider getDateFormats
      */
